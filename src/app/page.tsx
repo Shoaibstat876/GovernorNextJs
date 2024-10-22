@@ -1,4 +1,5 @@
-//src>app>page.tsx as homepage
+// src/app/page.tsx
+
 // Importing 'Link' from Next.js. The 'Link' component is used to handle navigation between different pages in a Next.js application.
 import Link from "next/link";
 
@@ -30,26 +31,14 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         
         {/* Link 1: Electronics */}
-        {/* Each <Link> component wraps around a <div> that acts as a clickable card. */}
-        {/* 'group' is used for hover animations, applying styles when the user hovers over the card. */}
         <Link href="/electronics" className="group">
-          {/* The content of the card */}
-          {/* 'p-6' adds padding inside the card, 'bg-white dark:bg-gray-800' sets background colors for light and dark modes. */}
-          {/* 'rounded-lg' gives the card rounded corners, 'shadow' adds a small shadow, and 'hover:shadow-lg' makes the shadow bigger when hovered. */}
-          {/* 'transition' ensures smooth transition animations when hovering over the card. */}
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
-            {/* Card title */}
-            {/* 'text-2xl' sets the font size, and 'font-semibold' makes the text slightly bold. */}
-            {/* The text color switches between light (gray-900) and dark (white) modes. */}
-            {/* 'group-hover:text-blue-600' changes the text color to blue when the card is hovered over. */}
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600">
               Electronics
             </h2>
           </div>
         </Link>
 
-        {/* Repeat the same structure for the other links */}
-        
         {/* Link 2: Category */}
         <Link href="/category" className="group">
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
@@ -95,8 +84,16 @@ export default function Home() {
           </div>
         </Link>
 
+        {/* Link 7: Menu */}
+        <Link href="/menu/item1" className="group"> {/* Change 'item1' to the specific item you want to link to */}
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600">
+              Menu
+            </h2>
+          </div>
+        </Link>
+
       </div>
     </div>
   );
 }
-
